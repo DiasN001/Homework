@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="js.css">
+</head>
+<body>
+
+
+  <!--<h2 id="title">Hello</h2>
+  <button id="btn">Change Text</button>
+  <script>
+    const title = document.querySelector("#title");
+    const btn = document.querySelector("#btn");
+    btn.addEventListener("click", function() {
+      title.innerHTML = "Welcome students!";
+    });
+  </script>
+</body>
+</html>-->
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <title>Array render</title>
+</head>
+<body>
+
+  <h2>Students List</h2>
+  <ul id="list"></ul>
+
+  <script>
+    const students = ["Ali", "Dana", "Aruzhan"];
+
+    const list = document.querySelector("#list");
+
+    students.forEach(function(name) {
+      list.innerHTML += `<li>${name}</li>`;
+    });
+  </script>
+
+</body>
+</html>-->
+
+<!--<h2>Students</h2>
+<ul id="list"></ul>
+<script>
+  const students = [
+    { name: "Ali", course: 1 },
+    { name: "Dana", course: 2 },
+    { name: "Aruzhan", course: 1 }
+  ];
+
+  const list = document.querySelector("#list");
+
+  students.forEach(function(student) {
+    list.innerHTML += `
+      <li>
+        ${student.name} - Course: ${student.course}
+      </li>
+    `;
+  });
+</script>-->
+
+
+
+<!--<h2>Students</h2>
+<button id="btn">Show only 1 course</button>
+<ul id="list"></ul>
+
+<script>
+  const students = [
+    { name: "Ali", course: 1 },
+    { name: "Dana", course: 2 },
+    { name: "Aruzhan", course: 1 }
+  ];
+
+  const list = document.querySelector("#list");
+  const btn = document.querySelector("#btn");
+
+  function render(arr) {
+    list.innerHTML = ""; // Очистка списка перед отрисовкой
+
+    arr.forEach(function(student) {
+      list.innerHTML += `
+        <li>
+          ${student.name} - Course: ${student.course}
+        </li>
+      `;
+    });
+  }
+
+  render(students); // Начальный рендеринг всех студентов
+
+  btn.addEventListener("click", function() {
+    const filtered = students.filter(function(student) {
+      return student.course === 1;
+    });
+
+    render(filtered); // Рендеринг отфильтрованного списка
+  });
+</script>-->
+
+
+
+<!--<h2>Numbers</h2>
+<button id="btn">Show Even</button>
+<ul id="list"></ul>
+
+<script>
+  const numbers = [1, 2, 3, 4, 5, 6];
+
+  const list = document.querySelector("#list");
+  const btn = document.querySelector("#btn");
+
+  function render(arr) {
+    list.innerHTML = "";
+
+    arr.forEach(function(num) {
+      list.innerHTML += `<li>${num}</li>`;
+    });
+  }
+
+  render(numbers);
+
+  btn.addEventListener("click", function() {
+    const even = numbers.filter(function(num) {
+      return num % 2 === 0;
+    });
+
+    render(even);
+  });
+</script>-->
+
+
+
+<!--<h2>Products</h2>
+<button id="btn">Price < 500</button>
+<ul id="list"></ul>
+
+<script>
+  const products = [
+    { name: "Phone", price: 300 },
+    { name: "Laptop", price: 1000 },
+    { name: "Tablet", price: 450 }
+  ];
+
+  const list = document.querySelector("#list");
+  const btn = document.querySelector("#btn");
+
+  function render(arr) {
+    list.innerHTML = "";
+    arr.forEach(function(product) {
+      list.innerHTML += `<li>${product.name} - ${product.price}$</li>`;
+    });
+  }
+
+  render(products);
+
+  btn.addEventListener("click", function() {
+    const cheap = products.filter(function(product) {
+      return product.price < 500;
+    });
+    render(cheap);
+  });
+</script>-->
+
+
+<!--<script>
+  const students = ["Ali", "Dana", "Aruzhan", "Nursultan"];
+
+  const list = document.querySelector("#list");
+  const search = document.querySelector("#search");
+
+  function render(arr) {
+    list.innerHTML = "";
+
+    arr.forEach(function(name) {
+      list.innerHTML += `<li>${name}</li>`;
+    });
+  }
+
+  render(students);
+
+  search.addEventListener("input", function() {
+    const value = search.value.toLowerCase();
+
+    const filtered = students.filter(function(name) {
+      return name.toLowerCase().includes(value);
+    });
+
+    render(filtered);
+  });
+</script>-->
+
+
+<!--<style>
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  .row { display: flex; gap: 10px; margin-bottom: 12px; }
+  button { padding: 8px 12px; cursor: pointer; }
+  ul { padding-left: 18px; }
+  li { margin: 6px 0; }
+</style>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: rgb(255, 248, 240);
+  color: rgb(60, 40, 20);
+  padding: 40px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(230, 120, 40);
+}
+
+.row {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 25px rgb(255,220,190);
+}
+
+input, select, button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgb(255,200,160);
+  font-size: 14px;
+}
+
+input, select {
+  background: rgb(255,252,248);
+}
+
+button {
+  background: rgb(255,140,60);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: rgb(230,110,40);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid rgb(255,140,60);
+  box-shadow: 0 6px 18px rgb(255,220,190);
+}
+
+.badge {
+  background: rgb(255,235,210);
+  color: rgb(220,100,30);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>Students App</h2>
+
+<div class="row">
+  <input id="search" placeholder="Search name or surname">
+
+  <select id="course">
+    <option value="all">All courses</option>
+    <option value="1">1 course</option>
+    <option value="2">2 course</option>
+    <option value="3">3 course</option>
+  </select>
+
+  <select id="age">
+    <option value="all">All ages</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+  </select>
+
+  <select id="sort">
+    <option value="none">No sort</option>
+    <option value="az">A → Z</option>
+    <option value="za">Z → A</option>
+  </select>
+
+  <button id="reset">Reset</button>
+</div>
+
+<ul id="list"></ul>
+
+<script>
+const students = [
+  { name: "Ali", surname: "Nurly", course: 1, age: 16 },
+  { name: "Dana", surname: "Serik", course: 2, age: 18 },
+  { name: "Aruzhan", surname: "Kali", course: 1, age: 17 },
+  { name: "Nursultan", surname: "Bekov", course: 3, age: 19 },
+  { name: "Madi", surname: "Tulegen", course: 2, age: 18 },
+  { name: "Aigerim", surname: "Omar", course: 1, age: 16 },
+  { name: "Zan", surname: "Toktar", course: 1, age: 17 },
+  { name: "Asyl", surname: "Mukhan", course: 3, age: 19 },
+  { name: "Zeynep", surname: "Akyl", course: 2, age: 18 },
+  { name: "Malik", surname: "Daulet", course: 2, age: 17 },
+  { name: "Gulim", surname: "Erbol", course: 3, age: 19 },
+  { name: "Yakub", surname: "Nazar", course: 1, age: 16 },
+  { name: "Balym", surname: "Kenes", course: 2, age: 18 },
+  { name: "Nurbergen", surname: "Aman", course: 1, age: 17 },
+  { name: "Tanya", surname: "Volkova", course: 1, age: 19 },
+  { name: "Linara", surname: "Sultan", course: 2, age: 18 },
+  { name: "Pikon", surname: "Lee", course: 3, age: 17 },
+  { name: "Rustem", surname: "Baim", course: 1, age: 16 },
+  { name: "Dias", surname: "Zhan", course: 2, age: 18 },
+  { name: "Arman", surname: "Kuat", course: 3, age: 19 }
+];
+const list = document.querySelector("#list");
+const searchInput = document.querySelector("#search");
+const courseSelect = document.querySelector("#course");
+const ageSelect = document.querySelector("#age");
+const sortSelect = document.querySelector("#sort");
+const resetBtn = document.querySelector("#reset");
+
+function render(arr) {
+  list.innerHTML = "";
+  arr.forEach(function(s) {
+    list.innerHTML += `
+      <li>
+        <strong>${s.name} ${s.surname}</strong>
+        <span class="badge">Course: ${s.course}</span>
+        <span class="badge">Age: ${s.age}</span>
+      </li>
+    `;
+  });
+}
+
+function applyAll() {
+  const text = searchInput.value.toLowerCase().trim();
+  const courseValue = courseSelect.value;
+  const ageValue = ageSelect.value;
+  const sortValue = sortSelect.value;
+  let result = students;
+  if (text !== "") {
+    result = result.filter(function(s) {
+      return (s.name + " " + s.surname)
+        .toLowerCase()
+        .includes(text);
+    });
+  }
+  if (courseValue !== "all") {
+    result = result.filter(function(s) {
+      return s.course == courseValue;
+    });
+  }
+  if (ageValue !== "all") {
+    result = result.filter(function(s) {
+      return s.age == ageValue;
+    });
+  }
+  if (sortValue === "az") {
+    result = result.sort(function(a, b) {
+      return a.name.localeCompare(b.name);
+    });
+  }
+  if (sortValue === "za") {
+    result = result.sort(function(a, b) {
+      return b.name.localeCompare(a.name);
+    });
+  }
+
+  render(result);
+}
+
+searchInput.addEventListener("input", applyAll);
+courseSelect.addEventListener("change", applyAll);
+ageSelect.addEventListener("change", applyAll);
+sortSelect.addEventListener("change", applyAll);
+
+resetBtn.addEventListener("click", function() {
+  searchInput.value = "";
+  courseSelect.value = "all";
+  ageSelect.value = "all";
+  sortSelect.value = "none";
+  render(students);
+});
+
+render(students);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; padding: 20px; background: #f6f6f6; }
+.app { max-width: 680px; background: white; padding: 16px; border-radius: 12px; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+input, select, button { padding: 10px; border-radius: 10px; border: 1px solid #ddd; }
+input { flex: 1; min-width: 200px; }
+select { min-width: 160px; }
+button { cursor: pointer; }
+ul { padding-left: 18px; }
+li { margin: 8px 0; }
+.badge { font-size: 12px; padding: 2px 8px; border: 1px solid #ddd; border-radius: 999px; margin-left: 8px; }
